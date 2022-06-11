@@ -1,24 +1,31 @@
-# README
+# アプリケーション名
+ALCORHYTHM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+休肝日や飲酒する日を予定し記録することで、自らの飲酒について見直し、適切な飲酒を行うことができる。
 
-Things you may want to cover:
+# URL
 
-* Ruby version
+# テスト用アカウント
+・Basic認証ID  
+・Basic認証パスワード  
+・メールアドレス：  
+・パスワード：
 
-* System dependencies
+# 利用方法
 
-* Configuration
+## 予定確認・更新
+1.テスト用アカウントでログイン後、トップページ（一覧ページ）で予定の確認・更新を行うことができる。  
+2.「カレンダーを表示する」ボタンを押すと、休肝日カレンダーが出てきて、休肝日の予定や結果を確認することができる。　　
 
-* Database creation
 
-* Database initialization
+# アプリケーションを作成した背景  
+# 洗い出した要件  
+# 実装した機能についての画像やGIFおよびその説明  
+# 実装予定の機能  
+# データベース設計  
+# 画面遷移図  
+# 開発環境  
+# ローカルでの動作方法  
+# 工夫したポイント  
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
