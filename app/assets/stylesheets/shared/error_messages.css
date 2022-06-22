@@ -1,0 +1,28 @@
+.error-alert {
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.error-title {
+  font-size: 2vw;
+  color: red;
+}
+
+.error-message{
+  text-align: center;
+  display: block;
+}
+
+.error-message ul{
+  margin-top: 5vw;
+  padding-left: 0;
+	list-style: none;
+	display: inline-block;
+}
+
+.error-messages {
+  font-size: 1.3vw;
+  color: red;
+  text-align: left;
+  list-style: square;
+}
