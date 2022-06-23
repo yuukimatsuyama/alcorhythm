@@ -9,6 +9,6 @@ class Alcohol < ActiveHash::Base
     {id: 5, name: 'ウイスキー'},
     {id: 6, name: 'カクテル'},
     {id: 7, name: '酎ハイ'},
-    {id: 8, name: 'カクテル'},
+    {id: 8, name: 'ハイボール'},
   ]
 end
