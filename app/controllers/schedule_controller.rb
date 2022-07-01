@@ -1,4 +1,7 @@
 class ScheduleController < ApplicationController
+  before_action :set_begining_of_week
+
+
   def index
     @schedules = Schedule.all
     @schedule = Schedule.new
@@ -37,6 +40,10 @@ class ScheduleController < ApplicationController
   end
 
   private
+
+  def set_begining_of_week
+    Date.beginning_of_week = :sunday
+  end
 
   def schedule_parameter
     params.require(:schedule).permit(:title, :content, :start_time)

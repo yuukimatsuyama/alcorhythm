@@ -1,9 +1,7 @@
 <%= render "shared/main-header"%>
+
 <div class="content">
   <div class="right-content">
-    <div class="right-title">
-      <h1 class="title-name">カレンダー</h1>
-    </div>
     <div class="col-md-8">
       <%= month_calendar events: @schedules do |date, schedules| %>
       <%= date.day %>
@@ -18,15 +16,43 @@
   </div>
   <div class="left-content">
     <div class="left-top-content">
-     <h1 class="title-name">あなたのALCORHYTHM</h1>
-     <div class="left-content-text"></div>
+      <div class="left-title-box">
+        <div class="left-title-name">あなたのALCORHYTHM</div>
+      </div>
+      <div class="left-content-text">
+        <ul class="left-content-list">
+          <li class="result">直近1週間のあなたの休肝日日数</li>
+          <li class="result">飲酒した日の平均飲酒量</li>
+      </div>
     </div>
     <div class="left-bottom-content">
-    <h1 class="title-name">飲酒記録</h1>
-    <div class="left-content-text"></div>
+      <div class="left-title-box">
+        <div class="left-title-name">あなたの適正飲酒量</div>
+      </div>
+      <div class="left-bottom-text">
+        <form class="alcohol-amount">
+          <div class="questions">
+            おなたの体重を入力してください<br>
+            <input type="number" name="body-weight" value="number">
+            <span class="weight-unit">kg</span>
+          </div>
+          <br>
+          <div class="questions">
+            下の表を参考に飲みたいお酒のアルコール度数を入力してください<br>
+            <input type="number" name="body-weight" value="number">
+            <span class="percentage">%</span>
+          </div>
+          <br>
+          <div class="answer">
+          あなたの適正量は
+          <span>
+            <span id='add-collect-amount'></span>ml
+          </span>
+          です。下の表を参考にどれほどの量なのか確認しましょう。
+          </div>
+      </div>
     </div>
   </div>
 </div>
-  <div class="footer">
-    <%= render "shared/main-footer"%>
-  </div>
+
+<%= render "shared/main-footer"%>
