@@ -10,7 +10,6 @@ class SchedulesController < ApplicationController
   end
 
   def show
-    @schedules = Schedule.all
     @schedule = Schedule.find(params[:id])
   end
 

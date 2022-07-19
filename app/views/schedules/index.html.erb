@@ -24,7 +24,6 @@
         </div>
       </div>
         <%= form_with model:@schedule,local: true do |f| %>
-        <%= render 'shared/error_messages', model: f.object %>
           <div class="questions">
             <div class="bold-text">飲酒した日付(必須)</div>
               <%= f.date_select :start_time%>

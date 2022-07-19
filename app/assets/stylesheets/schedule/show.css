@@ -7,7 +7,7 @@
 }
 
 .show-title-box{
-  width: 30%;
+  width: 50%;
   background: linear-gradient(-135deg, #902c9d, #51bbeb);
   text-align: center;
   border-radius: 30px;
@@ -21,5 +21,66 @@
 
 .show-main{
   margin-top: 30px;
-  padding: 0 40px;
+  padding:auto;
+}
+
+.show-content{
+  display: flex;
+  justify-content: center;
+}
+
+.content-item{
+  font-size: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+  width: 20%;
+}
+
+.item-result{
+  font-size: 30px;
+  margin-left: 80px;
+  text-align: left;
+  width: 20%;
+}
+
+.item-result-appropriate{
+  font-size: 30px;
+  margin-left: 80px;
+  text-align: left;
+  width: 20%;
+  color: rgb(247, 162, 203);
+}
+
+.item-result-no-appropriate{
+  font-size: 30px;
+  margin-left: 80px;
+  text-align: left;
+  width: 20%;
+  color: rgb(248, 4, 4);
+}
+
+.show-button-area{
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn--index{
+  width: 130px;
+  color: rgb(19, 142, 236) !important;
+  background: white;
+  font-weight: bold;
+  font-size: large ;
+  border: solid 1px blue;
+  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.6);
+  margin-right: 20px;
+}
+
+.btn--edit{
+  color: #fff;
+  background: red;
+  font-weight: bold;
+  font-size: large ;
+  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.6);
+  margin-left: 20px;
 }
