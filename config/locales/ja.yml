@@ -9,3 +9,6 @@ ja:
         password: パスワード
         password_confirmation: 確認用パスワード
         sex_id: 性別
+  time:
+    formats:
+      default: "%Y年%m月%d日"

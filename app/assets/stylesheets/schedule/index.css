@@ -1,0 +1,230 @@
+.main-content{
+  height: auto;
+  width: auto;
+}
+
+.right-title-box{
+  width: 35%;
+  background: linear-gradient(-135deg, #E4A972, #9941D8);
+  text-align: center;
+  border-radius: 30px;
+}
+.right-title-name{
+  font-size: 20px;
+  font-weight: 60px;
+  color:white;
+}
+
+.schedule-caution{
+  width: 100%;
+  height: 30vh;
+}
+
+.left-content{
+  width:35vw;
+  height: 100%;
+}
+
+.left-top-content{
+  height: 40%;
+  padding: 20px;
+}
+
+.result{
+  font-size: 20px;
+  margin-top: 20px;
+  border: 1px solid rgb(219, 247, 247);
+  background-color:rgb(219, 247, 247);
+}
+
+.left-title-box{
+  width: 100%;
+  background: linear-gradient(-135deg, #902c9d, #51bbeb);
+  text-align: center;
+  border-radius: 30px;
+}
+
+.left-title-name{
+  font-size: 20px;
+  font-weight: 60px;
+  color:white;
+}
+
+.left-top-good-message{
+  color: #51bbeb;
+  font-size: 18px;
+}
+
+.bad-result{
+  display: flex;
+  align-items: center;
+}
+
+.warning{
+  height: 20px;
+  width: 20px;
+}
+
+.left-top-bad-message{
+  color: red;
+  font-size: 18px;
+}
+
+.amount-average{
+  font-size: 30px;
+}
+
+.amount-average-message{
+  color: red;
+}
+
+.left-bottom-content{
+  height: 60%;
+  padding: 20px;
+}
+
+.questions{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.answer{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* simple_calendar */
+.calendar-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-title{
+  font-size: 40px;
+  font-weight: 60px;
+}
+.days-name{
+  color: brown;
+  background-color: rgb(241, 226, 232);
+}
+
+.arrow{
+  height: 40px;
+  width: 80px;
+}
+
+/* simple_calendar終わり */
+
+/* モーダルウィンドウ */
+#modal-overlay {
+  display: none;   /* デフォルトは非表示 */
+  z-index: 1;      /* モーダルウィンドウと通常画面の間に表示 */
+  position: fixed; /* 表示を固定してスクロールで動かさない */
+  top: 0;          /* 全画面表示なので0 */
+  left: 0;         /* 全画面表示なので0 */
+  width: 100%;     /* 全画面表示なので100% */
+  height: 100%;    /* 全画面表示なので100%。スマートフォンでの表示対応する場合は120%に */
+  background-color: rgba(0,0,0,0.75); /* 背景を黒の半透明に */
+}
+
+#modal-content {
+  z-index: 2;      /* 最前面に表示 */
+  position: fixed; /* 表示位置を固定 */
+  top: 50%;        /* 画面中央に表示 */
+  left: 50%;       /* 画面中央に表示 */
+  transform: translate(-50%, -50%); /* モーダルウィンドウの大きさ分中央にずらす */
+  /* 以下はモーダルウィンドウの外観。ご自由に */
+  width: 800px;
+  height: 800px;
+  margin: 1.5em auto 0;
+  padding: 10px 20px;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.modal-message-box {
+  width: 100%;
+  background: linear-gradient(-135deg, #902c9d, #51bbeb);
+  text-align: center;
+  border-radius: 30px;
+}
+
+.modal-message-text{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 60px;
+  color:white;
+}
+
+/* 入力フォーム用CSS */
+.questions{
+  padding: 0 auto;
+}
+
+.bold-text{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+
+.form-caution-text{
+  color: red;
+  font-size: 15px;
+}
+
+/* 「戻る」、「追加する」ボタン用CSS */
+
+.modal-button-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  line-height: 1.5;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+}
+
+.btn--create {
+  color: #fff;
+  background: red;
+  font-weight: bold;
+  font-size: large ;
+  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.6);
+}
+
+.btn--create:hover {
+  background: rgb(245, 151, 151);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.btn--cancel {
+  width: 130px;
+  color: rgb(19, 142, 236) !important;
+  background: white;
+  font-weight: bold;
+  font-size: large ;
+  border: solid 1px blue;
+  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.6);
+}
+
+.btn--cancel:hover {
+  background-color: rgb(207, 207, 249);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.modal-flash{
+  display: flex;
+  align-items: center;
+}
+

@@ -14,7 +14,7 @@
 }
 
 .user-select{
-  width: 30%;
+  width: 50%;
   height: 100%;
   padding: 40px;
 }
@@ -24,7 +24,7 @@
   justify-content: space-between;
 }
 
-.user-page{
+.select-content{
   font-size: 20px;
   font-weight: 60px;
   color: white;

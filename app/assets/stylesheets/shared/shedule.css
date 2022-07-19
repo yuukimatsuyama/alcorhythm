@@ -1,0 +1,42 @@
+.content{
+  width: 100vw;
+  height: 800px;
+  display: flex;
+}
+.right-content{
+  width: 65vw;
+  height: 100vh;
+  padding: 20px;
+}
+
+.how-to-use-btn{
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  background-color: gold;
+  border: 1px solid gold;
+  border-radius: 20px;
+  padding: 3px;
+}
+
+.schedule-show{
+  text-decoration: none;
+}
+
+.appropriate-amount{
+  color: white;
+  background-color: rgb(247, 162, 203);
+  border: 1px solid rgb(247, 162, 203);
+  border-radius: 5px;
+}
+
+.no-appropriate-amount{
+  color: white;
+  background-color: rgb(248, 4, 4);
+  border: 1px solid rgb(248, 4, 4);
+  border-radius: 5px;
+}
+
+.no-alcohol-day{
+  color: #51bbeb;
+}

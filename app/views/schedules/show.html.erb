@@ -1,0 +1,31 @@
+<div class="main-content">
+<%= render "shared/main-header"%>
+
+  <div class="show-title">
+    <div class="show-title-box">
+      <div class="show-title-text">飲酒結果</div>
+    </div>
+  </div>
+  <div class="show-main">
+    <div class="show-content">
+      <div class="content-item">飲酒した日付</div>
+      <div class="item-result">
+        <%= l @schedule.start_time%>
+    </div>
+    <div class="show-content">
+      <div class="content-item">お酒の種類</div>
+        <%= @schedule.alcohol.name%>
+    </div>
+    <div class="show-content">
+      <div class="content-item">度数</div>
+    </div>
+    <div class="show-content">
+      <div class="content-item">お酒の量</div>
+    </div>
+    <div class="show-content">
+      <div class="content-item">飲酒の程度</div>
+    </div>
+  </div>
+
+</div>
+<%= render "shared/main-footer"%>

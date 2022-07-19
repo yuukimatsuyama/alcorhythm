@@ -1,0 +1,25 @@
+.show-title{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-title-box{
+  width: 30%;
+  background: linear-gradient(-135deg, #902c9d, #51bbeb);
+  text-align: center;
+  border-radius: 30px;
+}
+
+.show-title-text{
+  font-size: 30px;
+  font-weight: 60px;
+  color:white;
+}
+
+.show-main{
+  margin-top: 30px;
+  padding: 0 40px;
+}

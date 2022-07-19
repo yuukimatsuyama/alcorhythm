@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :sex
+  has_many :schedules
  
   with_options presence: true do
     validates :nickname

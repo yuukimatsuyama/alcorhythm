@@ -1,0 +1,48 @@
+<div class="content">
+  <div class="right-content">
+  <div class="how-to-use">
+    <%= link_to 'ALCORHYTHMの使い方', "#",class: "how-to-use-btn"%>
+  </div>
+    <div class="col-md-8">
+      <%= month_calendar events: @schedules do |date, schedules| %>
+      <%= date.day %>
+    </div>
+      <% if schedules.present? %>
+      <% schedules.each do |schedule| %>
+        <% if current_user.sex_id == 2 %>
+          <% if schedule.amount * (schedule.percentage * 0.01) * 0.8 >= 12 %>
+            <%= link_to schedule_path(schedule.id),class:"schedule-show" do %>
+            <div class="appropriate-amount">
+            飲酒量は適量以下でした
+            </div>
+            <% end %>
+          <% else %>
+            <%= link_to schedule_path(schedule.id),class:"schedule-show" do %>
+            <div class="no-appropriate-amount">
+            飲酒量が適量を超えています
+            </div>
+          <% end %>
+          <% end %>
+        <% else %>
+          <% if schedule.amount * (schedule.percentage * 0.01) * 0.8 >= 20 %>
+            <%= link_to schedule_path(schedule.id),class:"schedule-show" do %>
+            <div class="appropriate-amount">
+            飲酒量は適量以下でした
+            </div>
+            <% end %>
+          <% else %>
+            <%= link_to schedule_path(schedule.id),class:"schedule-show" do %>
+            <div class="no-appropriate-amount">
+            飲酒量は適量を超えています
+            </div>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <% else %>
+        <div class="no-alcohol-day">休肝日</div>
+      <% end %>
+
+    <% end %>
+
+  </div>
