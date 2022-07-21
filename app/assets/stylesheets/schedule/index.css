@@ -3,18 +3,6 @@
   width: auto;
 }
 
-.right-title-box{
-  width: 35%;
-  background: linear-gradient(-135deg, #E4A972, #9941D8);
-  text-align: center;
-  border-radius: 30px;
-}
-.right-title-name{
-  font-size: 20px;
-  font-weight: 60px;
-  color:white;
-}
-
 .schedule-caution{
   width: 100%;
   height: 30vh;
@@ -74,6 +62,16 @@
   font-size: 30px;
 }
 
+.left-top-message-no{
+  color: rgb(238, 132, 214);
+  font-size: 18px;
+}
+
+.amount-average-no{
+  color: rgb(238, 132, 214);
+  font-size: 18px;
+}
+
 .amount-average-message{
   color: red;
 }
@@ -81,6 +79,7 @@
 .left-bottom-content{
   height: 60%;
   padding: 20px;
+  margin-top: 40px;
 }
 
 .questions{
@@ -88,9 +87,22 @@
   margin-top: 20px;
 }
 
+.expect-percentage{
+  width: 200px;
+}
+
 .answer{
   font-size: 20px;
   margin-top: 20px;
+}
+
+.answer-text{
+  margin-top: 20px;
+}
+
+.answewr-amount{
+  font-size: 30px;
+  color: red;
 }
 
 /* simple_calendar */
@@ -174,6 +186,17 @@
   font-size: 15px;
 }
 
+.reference-title-create{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  color:white;
+  background: linear-gradient(-135deg, #902c9d, #51bbeb);
+  text-align: center;
+  border-radius: 30px;
+  width: 80px;
+}
+
 /* 「戻る」、「追加する」ボタン用CSS */
 
 .modal-button-area {
@@ -228,3 +251,24 @@
   align-items: center;
 }
 
+/* 参考写真CSS */
+
+.reference{
+  padding: 0 40px;
+}
+
+.reference-title{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 60px;
+  color:white;
+  background: linear-gradient(-135deg, #902c9d, #51bbeb);
+  text-align: center;
+  border-radius: 30px;
+  width: 20%;
+}
+
+.alcohol-date-img{
+  width: 100%;
+  margin-bottom: 20px;
+}

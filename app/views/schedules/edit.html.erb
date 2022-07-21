@@ -1,0 +1,56 @@
+<div class="main-content">
+<%= render "shared/main-header"%>
+
+  <div class="top-title">
+    <div class="top-title-box">
+      <div class="top-title-text">飲酒結果を編集する</div>
+    </div>
+  </div>
+  <%= form_with model:@schedule ,local: true do |f| %>
+  
+  <div class="edit-error">
+  <% if @schedule.errors.any? %>
+  <div class="error-message">
+      <% @schedule.errors.full_messages.each do |message| %>
+        <li class='error-messages'><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  </div>
+  
+  <div class="show-edit-main">
+    <div class="show-edit-content">
+      <div class="edit-content-item">飲酒した日付</div>
+      <div class="edit-result">
+         <%= f.date_select :start_time%>
+      </div>
+    </div>
+    <div class="show-edit-content">
+      <div class="edit-content-item">お酒の種類</div>
+        <div class="edit-result">
+        <%= f.collection_select(:alcohol_id, Alcohol.all, :id, :name, {}, {class:"select-box", id:"alcohol-category"}) %>
+        </div>
+    </div>
+    <div class="show-edit-content">
+      <div class="edit-content-item">度数</div>
+        <div class="edit-result">
+        <%= f.select :percentage, [*(0..100)]%>%
+        </div>
+    </div>
+    <div class="show-edit-content">
+      <div class="edit-content-item">お酒の量</div>
+        <div class="edit-result">
+        <%= f.number_field :amount, class:"select-box", id:"alcohol-amount", placeholder:"例)500(半角数字のみ)" %>ml
+        </div>
+    </div>
+    <div class="show-edit-button-area">
+      <%= link_to '戻る', root_path, data: {"turbolinks" => false} ,class: 'btn btn--index'%>
+      <%= link_to '削除する', schedule_path(@schedule.id), method: :delete, class: 'btn btn--destroy' %>
+      <%= f.submit '保存する', class: 'btn btn--edit' %>
+    </div>
+    <% end %>
+  </div>
+
+</div>
+<%= render "shared/main-footer"%>

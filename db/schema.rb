@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_06_27_032436) do
     t.integer "alcohol_id", null: false
     t.integer "percentage", null: false
     t.integer "amount", null: false
-    t.datetime "start_time", null: false
+    t.date "start_time", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

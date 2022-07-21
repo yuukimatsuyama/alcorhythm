@@ -1,37 +1,37 @@
 <div class="main-content">
 <%= render "shared/main-header"%>
 
-  <div class="show-title">
-    <div class="show-title-box">
-      <div class="show-title-text">飲酒結果</div>
+  <div class="top-title">
+    <div class="top-title-box">
+      <div class="top-title-text">飲酒結果</div>
     </div>
   </div>
-  <div class="show-main">
-    <div class="show-content">
+  <div class="show-edit-main">
+    <div class="show-edit-content">
       <div class="content-item">飲酒した日付</div>
       <div class="item-result">
         <%= l @schedule.start_time%>
       </div>
     </div>
-    <div class="show-content">
+    <div class="show-edit-content">
       <div class="content-item">お酒の種類</div>
         <div class="item-result">
         <%= @schedule.alcohol.name%>
         </div>
     </div>
-    <div class="show-content">
+    <div class="show-edit-content">
       <div class="content-item">度数</div>
         <div class="item-result">
         <%= @schedule.percentage%>%
         </div>
     </div>
-    <div class="show-content">
+    <div class="show-edit-content">
       <div class="content-item">お酒の量</div>
         <div class="item-result">
         <%= @schedule.amount%>ml
         </div>
     </div>
-    <div class="show-content">
+    <div class="show-edit-content">
       <div class="content-item">飲酒の程度</div>
       <% if current_user.sex_id == 2 %>
           <% if @schedule.amount * (@schedule.percentage * 0.01) * 0.8 <= 12 %>
@@ -55,9 +55,9 @@
             <% end %>
           <% end %>
     </div>
-    <div class="show-button-area">
-      <%= link_to '戻る', root_path, class: 'btn btn--index'%>
-      <%= link_to '編集する', "#", class: 'btn btn--edit' %>
+    <div class="show-edit-button-area">
+      <%= link_to '戻る', root_path, data: {"turbolinks" => false} ,class: 'btn btn--index'%>
+      <%= link_to '編集する', edit_schedule_path , class: 'btn btn--edit' %>
     </div>
   </div>
 

@@ -1,0 +1,36 @@
+<div class="main-content">
+<%= render "shared/main-header"%>
+
+  <div class="top-title">
+    <div class="top-title-box">
+      <div class="top-title-text">ALCORHYTHMとは？</div>
+    </div>
+  </div>
+  <div class="overview-content">
+    <div class="overview-text">
+      「ALCORHYTHM」とは、アルコール(ALCOHOL)とリズム(RHYTHM)を組み合わせた開発者が考えた造語で、
+      飲酒日と休肝日をバランスよく設けることで、お酒とうまくつきあい、生活リズムを改善することを目的としたアプリです。<br>
+      <span class="appropripate-text">適度な飲酒</span>は、ストレスを発散させる効果や、血圧や悪玉コレステロールを低下させる効果、
+      血行をよくして体を活性化する効果、そして食欲増進効果などいろいろな効果があります。<br>
+      一方、<span class="no-appropripate-text">過度な飲酒</span>は生活習慣病のリスクを高めたり、臓器障害を引き起こす可能性があります。
+      本アプリを有効活用し、お酒と上手くつきあい健康な体の維持を図りましょう。
+    </div>
+  </div>
+  <div class="top-title">
+    <div class="top-title-box">
+      <div class="top-title-text">ALCORHYTHMの活用方法</div>
+    </div>
+  </div>
+  <div class="overview-content">
+    <div class="overview-text">
+      飲酒した日または翌日に本アプリを開き、飲んだお酒の量を記録しましょう。
+      日々の記録を行うことで、自身の飲酒量や休肝日の設定を意識的に行うことができます。<br>
+      <span class="no-appropripate-text">休肝日は週2日を意識して設定しましょう。</span>
+    </div>
+  </div>
+  <div class="show-edit-button-area">
+      <%= link_to '戻る', root_path, data: {"turbolinks" => false} ,class: 'btn btn--index'%>
+    </div>
+
+</div>
+<%= render "shared/main-footer"%>

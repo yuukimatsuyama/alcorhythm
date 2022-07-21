@@ -1,0 +1,29 @@
+.edit-error{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-result{
+  font-size: 30px;
+  margin-left: 80px;
+  text-align: left;
+  width: 30%;
+}
+
+.edit-content-item{
+  font-size: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+  width: 30%;
+  padding-left: 120px;
+}
+
+.btn--destroy{
+  color: #fff;
+  background: blue;
+  font-weight: bold;
+  font-size: large ;
+  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.6);
+  margin-left: 20px;
+}

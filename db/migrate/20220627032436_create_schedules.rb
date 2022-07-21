@@ -5,7 +5,7 @@ class CreateSchedules < ActiveRecord::Migration[6.0]
       t.integer     :alcohol_id,     null: false 
       t.integer     :percentage,     null: false 
       t.integer     :amount,         null: false 
-      t.datetime    :start_time,     null: false 
+      t.date        :start_time,     null: false 
       t.references  :user,           null: false, foreign_key: true
       
       t.timestamps

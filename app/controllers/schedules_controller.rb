@@ -1,16 +1,15 @@
 class SchedulesController < ApplicationController
   before_action :set_begining_of_week
+  before_action :set_schedule,only: [:show, :edit, :destroy, :update]
   add_flash_types :danger
 
   def index
-    @schedules = Schedule.all
+    @schedules = current_user.schedules
     @schedule = Schedule.new
-    @schedule_count = @schedule.schedule_count
-    @amount_average = Schedule.average(:amount).round
+    @schedule_ave = Schedule.where(user_id: current_user).average(:amount)
   end
 
   def show
-    @schedule = Schedule.find(params[:id])
   end
 
   def create
@@ -23,18 +22,15 @@ class SchedulesController < ApplicationController
   end
 
   def destroy
-    @schedule = Schedule.find(params[:id])
     @schedule.destroy
     redirect_to schedules_path
   end
 
   def edit
-    @schedule = Schedule.find(params[:id])
   end
 
   def update
-    @schedule = Schedule.find(params[:id])
-    if @schedule.update(schedule_parameter)
+    if @schedule.update(schedule_params)
       redirect_to schedules_path
     else
       render 'edit'
@@ -47,6 +43,9 @@ class SchedulesController < ApplicationController
     Date.beginning_of_week = :sunday
   end
 
+  def set_schedule
+    @schedule = Schedule.find(params[:id])
+  end
 
   def schedule_params
     params.require(:schedule).permit(:alcohol_id, :percentage, :amount, :start_time).merge(user_id: current_user.id)

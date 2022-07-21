@@ -17,4 +17,5 @@ class User < ApplicationRecord
      VALID_PASSWORD_REGEX = /\A[a-z0-9]+\z/i
      validates :password,on: :create,length:{minimum:8}, format: { with: VALID_PASSWORD_REGEX ,message:'は半角英数字のみです。'}, confirmation: { type: :password, message: "がパスワードと一致していません。" }
   end
+
 end

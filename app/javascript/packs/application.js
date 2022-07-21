@@ -9,6 +9,8 @@ require("@rails/activestorage").start()
 require("channels")
 require('jquery')
 require('../modal_window')
+require("../alcohol_amount")
+require("../schedule_create")
 
 
 

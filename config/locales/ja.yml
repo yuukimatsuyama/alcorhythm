@@ -12,3 +12,13 @@ ja:
   time:
     formats:
       default: "%Y年%m月%d日"
+  activerecord:
+    models:
+      schedule:
+    attributes:
+      schedule:
+        start_time: 日付
+        alcohol_id: お酒の種類
+        percentage: 度数
+        amount: お酒の量
+        

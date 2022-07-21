@@ -1,10 +1,10 @@
 <header class='main-header'>
   <div class='main-logo'>
-    <%= link_to image_tag("logo_transparent.png", class:"logo-img"), "/" %>
+    <%= link_to image_tag("logo_transparent.png",data: {"turbolinks" => false} , class:"logo-img"), root_path %>
   </div>
   <div class='user-select'>
     <ul class='lists-right'>
-        <li><%= link_to 'ALCORHYTHMとは？', root_path, class: "select-content" %></li> 
+        <li><%= link_to 'ALCORHYTHMとは？', overview_index_path, class: "select-content" %></li> 
         <li><%= link_to 'マイページ', "#", class: "select-content" %></li> 
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
   </div>
