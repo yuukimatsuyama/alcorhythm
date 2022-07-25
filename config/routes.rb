@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to:"schedules#index"
   resources :schedules
   resources :overview, only: :index 
+  resources :users, only: :show
   
   devise_scope :user do
     get '/users', to: 'devise/registrations#new'

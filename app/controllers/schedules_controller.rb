@@ -2,6 +2,7 @@ class SchedulesController < ApplicationController
   before_action :set_begining_of_week
   before_action :set_schedule,only: [:show, :edit, :destroy, :update]
   add_flash_types :danger
+  before_action :ensure_user,only: [:show, :edit, :destroy, :update]
 
   def index
     @schedules = current_user.schedules
@@ -23,7 +24,7 @@ class SchedulesController < ApplicationController
 
   def destroy
     @schedule.destroy
-    redirect_to schedules_path
+    redirect_to root_path
   end
 
   def edit
@@ -49,6 +50,12 @@ class SchedulesController < ApplicationController
 
   def schedule_params
     params.require(:schedule).permit(:alcohol_id, :percentage, :amount, :start_time).merge(user_id: current_user.id)
+  end
+
+  def ensure_user
+    unless @schedule.user_id == current_user.id
+      redirect_to root_path
+    end
   end
 
 end

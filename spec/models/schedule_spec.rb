@@ -19,8 +19,7 @@ RSpec.describe Schedule, type: :model do
       context 'データが保存できない' do
         it '同一ユーザーで同じ日に重複したデータは保存できない' do
           @schedule.save
-          schedule = Schedule.create
-          schedule.start_time = "2022-7-20"
+          schedule = Schedule.create(user_id:1,start_time:"2022-7-20")
           schedule.valid?
           expect(schedule.errors.full_messages).to include("")
         end

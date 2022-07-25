@@ -21,7 +21,7 @@
 
 .lists-right{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .select-content{

@@ -109,11 +109,29 @@
       <div class="left-title-box">
         <div class="left-title-name">あなたの1日の適正飲酒量</div>
       </div>
+      <% if current_user.sex_id == 2%>
       <div class="left-bottom-text">
         <form class="alcohol-amount">
           <div class="questions">
             下の表を参考に飲みたいお酒のアルコール度数を入力してください。<br>
             <div class="answer">
+              <input type="tsxt" id="expect-percentage2" class="expect-percentage" placeholder="例)5 半角数字">%
+              <span>
+              のお酒の場合
+              </span>
+              <div class="answer-text">
+              <span id='add-collect-amount2' class='answewr-amount'></span>ml
+               が適正量です。<br>
+               下の表でどれほどの量か確認してみましょう。
+               </div>
+          </div>
+          </div>
+      <% else %>
+        <div class="left-bottom-text">
+          <form class="alcohol-amount">
+            <div class="questions">
+              下の表を参考に飲みたいお酒のアルコール度数を入力してください。<br>
+              <div class="answer">
               <input type="tsxt" id="expect-percentage" class="expect-percentage" placeholder="例)5 半角数字">%
               <span>
               のお酒の場合
@@ -123,8 +141,9 @@
                が適正量です。<br>
                下の表でどれほどの量か確認してみましょう。
                </div>
-          </div>
-          </div>
+             </div>
+        </div>
+      <% end %>
       </div>
     </div>
   </div>

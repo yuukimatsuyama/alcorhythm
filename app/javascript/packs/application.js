@@ -10,6 +10,7 @@ require("channels")
 require('jquery')
 require('../modal_window')
 require("../alcohol_amount")
+require("../alcohol_amount_woman")
 require("../schedule_create")
 
 

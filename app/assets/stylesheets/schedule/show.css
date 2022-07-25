@@ -1,4 +1,4 @@
-/* show画面とedit画面共通 */
+/* schedule表示画面と編集画面とマイページ画面共通 */
 /* overview画面と併用 */
 
 .top-title{
@@ -59,7 +59,7 @@
   margin-left: 20px;
 }
 
-/* show-edit画面とedit画面共通終わり */
+/* schedule表示画面と編集画面とマイページ画面共通 */
 .content-item{
   font-size: 30px;
   margin-bottom: 40px;
