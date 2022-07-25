@@ -1,0 +1,157 @@
+<div class="main-content">
+<%= render "shared/main-header"%>
+
+<%= render "shared/schedule"%>
+
+
+    <div class="schedule-add">
+      <%# モーダルウィンドウ %>
+      <div class="modal-flash">
+        <a id="modal-open" class="btn btn--create">飲酒の結果を追加</a>
+        <div class="flash_message">
+       <%= render 'shared/flash_message' %>
+      </div>
+      </div>
+
+      <%# 以下削除選択時モーダルウィンドウ(デフォルトは非表示) %>
+      <div id="modal-overlay"> <%# モーダルウィンドウ表示時の黒背景 %>
+
+      <div id="modal-content"> <%# モーダルウィンドウ部 %>
+      <div class="modal-content">
+      <div class="modal-message-box">
+        <div class="modal-message-text">
+        飲酒結果を入力してください
+        </div>
+      </div>
+        <%= form_with model:@schedule,local: true do |f| %>
+          <div class="questions">
+            <div class="bold-text">飲酒した日付(必須)</div>
+              <%= f.date_select :start_time %>
+            <div class="form-caution-text"> *一度保存した日付を編集する際は、カレンダーの日付をクリックしてください。</div>
+            <div class="bold-text">お酒の種類(必須)</div>
+              <%= f.collection_select(:alcohol_id, Alcohol.all, :id, :name, {}, {class:"select-box", id:"alcohol-category"}) %>
+            <div class="form-caution-text"> *必ず選択してください</div>
+            <div class="bold-text">度数(必須)</div>
+              <%= f.select :percentage, [*(0..100)]%>
+              <span>%</span>
+              <div class="form-caution-text"> *0より大きい数字を記入してください</div>
+            <div class="bold-text">お酒の量(必須)</div>
+              <%= f.number_field :amount, class:"select-box", id:"alcohol-amount", placeholder:"例)500(半角数字のみ)" %>
+              <span>ml</span>
+              <div class="form-caution-text"> *下の表を参考にしてください</div>
+            <div class="reference-title-create">参考</div>
+              <%= image_tag "alcohol_date.jpeg", class: 'alcohol-date-img' %>
+            </div>
+        
+
+      <div class="modal-button-area">
+        <div id= "modal-close" class="btn btn--cancel">
+        戻る
+        </div>
+        <%= f.submit class:"btn btn--create" %>
+      </div>
+    </div>
+   </div>
+  </div>
+    </div>
+  </div>
+  <% end %>
+
+
+  <div class="left-content">
+    <div class="left-top-content">
+      <div class="left-title-box">
+        <div class="left-title-name">あなたのALCORHYTHM</div>
+      </div>
+      <% if @schedules.present? %>
+      <div class="left-content-text">
+        <ul class="left-content-list">
+        <% if @schedules.where('start_time > ?', 1.week.ago).count <= 5%>
+          <li class="result">直近1週間のあなたの休肝日日数</li>
+            <div class="left-top-good-message">
+            1週間で2日以上の休肝日が確保できています。<br>飲酒日は飲みすぎないように意識して、週2日以上の休肝日設定を継続しましょう。
+            </div>
+          <% else %>
+          <div class="bad-result">
+            <li class="result">直近1週間のあなたの休肝日日数</li>
+            <%= image_tag 'warning.png',class:"warning" %>
+          </div>
+            <div class="left-top-bad-message">
+            1週間で2日以上の休肝日が確保できていません。<br>週2日以上の休肝日設定を意識し、計画的に休肝日を設定しましょう。
+            </div>
+          <% end %>
+          <li class="result">飲酒日1日における平均飲酒量</li>
+            <div class="amount-average">
+              <%= @schedule_ave.round %>ml
+            </div>
+            <div class="amount-average-message">
+              ※(あなたの1日の適正飲酒量)で適量を計算してみましょう！
+            </div>
+      </div>
+      <% else %>
+      <div class="left-content-text">
+        <ul class="left-content-list">
+          <li class="result">直近1週間のあなたの休肝日日数</li>
+            <div class="left-top-message-no">
+              飲酒結果がまだ登録されていません。
+            </div>
+          <li class="result">飲酒日1日における平均飲酒量</li>
+            <div class="amount-average-no">
+              飲酒結果がまだ登録されていません。
+            </div>
+            <div class="amount-average-message">
+              ※(あなたの1日の適正飲酒量)で適量を計算してみましょう！
+            </div>
+      </div>
+      <% end %>
+    </div>
+    <div class="left-bottom-content">
+      <div class="left-title-box">
+        <div class="left-title-name">あなたの1日の適正飲酒量</div>
+      </div>
+      <% if current_user.sex_id == 2%>
+      <div class="left-bottom-text">
+        <form class="alcohol-amount">
+          <div class="questions">
+            下の表を参考に飲みたいお酒のアルコール度数を入力してください。<br>
+            <div class="answer">
+              <input type="tsxt" id="expect-percentage2" class="expect-percentage" placeholder="例)5 半角数字">%
+              <span>
+              のお酒の場合
+              </span>
+              <div class="answer-text">
+              <span id='add-collect-amount2' class='answewr-amount'></span>ml
+               が適正量です。<br>
+               下の表でどれほどの量か確認してみましょう。
+               </div>
+          </div>
+          </div>
+      <% else %>
+        <div class="left-bottom-text">
+          <form class="alcohol-amount">
+            <div class="questions">
+              下の表を参考に飲みたいお酒のアルコール度数を入力してください。<br>
+              <div class="answer">
+              <input type="tsxt" id="expect-percentage" class="expect-percentage" placeholder="例)5 半角数字">%
+              <span>
+              のお酒の場合
+              </span>
+              <div class="answer-text">
+              <span id='add-collect-amount' class='answewr-amount'></span>ml
+               が適正量です。<br>
+               下の表でどれほどの量か確認してみましょう。
+               </div>
+             </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="reference">
+<div class="reference-title">参考</div>
+<%= image_tag "alcohol_date.jpeg", class: 'alcohol-date-img' %>
+</div>
+
+<%= render "shared/main-footer"%>
+</div>

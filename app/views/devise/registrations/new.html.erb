@@ -31,7 +31,8 @@
     <%= f.collection_select(:sex_id, Sex.all, :id,:name,{},{class:"input-default",id:"sex"})%>
     </div>
     <div class="sex-attention">
-    ※入力した性別によって適正飲酒量を表示します
+    ※入力した性別によって飲酒における基準値が変わります。<br>
+    「その他」を選択した場合は、男性の基準値で算出します。
     </div>
    </div>
   <div class='register'>

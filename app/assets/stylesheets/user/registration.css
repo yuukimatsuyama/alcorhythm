@@ -1,5 +1,9 @@
  /* サインアップ、ログイン共通部分 */
-.registration-main {
+ * {
+  box-sizing: border-box;
+}
+
+ .registration-main {
   width: 100%;
   min-width: 800px;
   height: 100%;

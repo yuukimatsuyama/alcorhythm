@@ -1,0 +1,19 @@
+.overview-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 200px;
+}
+
+.overview-text{
+  font-size: 25px;
+}
+
+.appropripate-text{
+  color: #51bbeb;
+}
+
+.no-appropripate-text{
+  color: red;
+}

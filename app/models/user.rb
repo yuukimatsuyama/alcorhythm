@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :sex
+  has_many :schedules
  
   with_options presence: true do
     validates :nickname
@@ -16,4 +17,5 @@ class User < ApplicationRecord
      VALID_PASSWORD_REGEX = /\A[a-z0-9]+\z/i
      validates :password,on: :create,length:{minimum:8}, format: { with: VALID_PASSWORD_REGEX ,message:'は半角英数字のみです。'}, confirmation: { type: :password, message: "がパスワードと一致していません。" }
   end
+
 end

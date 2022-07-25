@@ -1,8 +1,7 @@
-.login {
-  width: 50%;
+.user-select-btn {
+  width: 100px;
   margin: 0 auto;
-  margin-top: 50px;
-  display: flex;
+  padding-top: 50px;
   align-items: center;
   justify-content: center;
 }
@@ -10,6 +9,17 @@
 .login-btn {
   width: 100px;
   background: rgb(241, 226, 232);
+  border: none;
+  color: rgb(52, 5, 53);
+  line-height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.sign-in-btn {
+  width: 100px;
+  text-decoration: none;
   border: none;
   color: rgb(52, 5, 53);
   line-height: 40px;

@@ -1,0 +1,47 @@
+.main-header {
+  width: 100%;
+  min-width: 800px;
+  height: 100px;
+  background-color: rgb(241, 226, 232);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-img {
+  width: 200px;
+  height: 100%;
+}
+
+.user-select{
+  width: 50%;
+  height: 100%;
+  padding: 40px;
+}
+
+.lists-right{
+  display: flex;
+  justify-content: space-around;
+}
+
+.select-content{
+  font-size: 20px;
+  font-weight: 60px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #b49cee;
+  background-color: #b49cee;
+  padding: 9px;
+  border-radius: 20px;
+}
+
+.logout{
+  font-size: 20px;
+  font-weight: 60px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #b49cee;
+  background-color: #b49cee;
+  padding: 9px;
+  border-radius: 20px;
+}

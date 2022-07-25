@@ -1,0 +1,42 @@
+<div class="main-content">
+<%= render "shared/main-header"%>
+<div class="top-title">
+    <div class="top-title-box">
+      <div class="top-title-text">マイページ</div>
+    </div>
+  </div>
+  <div class="show-edit-main">
+    <div class="show-edit-content">
+      <div class="content-item">あなたの名前</div>
+      <div class="item-result">
+        <%=@nickname%>
+      </div>
+    </div>
+    <div class="show-edit-content">
+      <div class="content-item">性別</div>
+        <div class="item-result">
+        <%= @sex_id %>
+        </div>
+    </div>
+    <div class="show-edit-content">
+      <div class="content-item">メールアドレス</div>
+        <div class="item-result">
+        <%= @email %>
+        </div>
+    </div>
+    <div class="show-edit-content">
+      <div class="content-item">よく飲むお酒</div>
+        <div class="item-result">
+        <% @alcohol_ranks.each do|schedule| %>
+        <%= schedule.alcohol.name %>
+        <% end %>
+        </div>
+    </div>
+  </div>
+  <div class="show-edit-button-area">
+      <%= link_to '戻る', root_path, data: {"turbolinks" => false} ,class: 'btn btn--index'%>
+    </div>
+  </div>
+
+</div>
+<%= render "shared/main-footer"%>
